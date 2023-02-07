@@ -4,7 +4,7 @@
 }
 
 body{
-	background: #524352;
+	background: #160d1c;
 }
 
 .header h1{
@@ -19,6 +19,9 @@ body{
 .title-1 {
 	padding-top: 50px;
 	font-size: 4rem;
+	animation-name: title-scale;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
 .title-2{
@@ -26,7 +29,7 @@ body{
 }
 
 header{
-	background: #686887;
+	background: #160d1c;
 	height: 325px;
 	width: 100%;
 	display: flex;
@@ -34,7 +37,7 @@ header{
 }
 
 .featured-books{
-	background: #524352;
+	background: #312649;
 	height: 80vh;
 	/*width: 50vw;*/
 }
@@ -51,18 +54,16 @@ header{
 	height: 100%;
 }
 
-.green-box{
-	background: #90b870
+.db-box{
+	background: #504f74
 }
 
-.pink-box{
-	background: #b07972
+.lb-box{
+	background: #78859a
 }
 
-.orange-box{
-	background: #d9af80;
-}
-
-.blue-box{
-	background: #7f9bb0;
+@keyframes title-scale{
+	0%{transform: scale(0.9);}
+	50%{transform: scale(1.0);}
+	100%{transform: scale(0.9);}
 }
