@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #524352;
+}
+
+.header h1{
+	font-family: Aboreto;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	letter-spacing: 10px;
+}
+
+.title-1 {
+	padding-top: 50px;
+	font-size: 4rem;
+}
+
+.title-2{
+	padding-top: 25px;
+}
+
+header{
+	background: #686887;
+	height: 325px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.featured-books{
+	background: #524352;
+	height: 80vh;
+	/*width: 50vw;*/
+}
+
+.new-releases{
+	/*background: #90b870;*/
+	height: 200px;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.release{
+	border: 1px solid black;
+	height: 100%;
+}
+
+.green-box{
+	background: #90b870
+}
+
+.pink-box{
+	background: #b07972
+}
+
+.orange-box{
+	background: #d9af80;
+}
+
+.blue-box{
+	background: #7f9bb0;
+}
