@@ -1,69 +1,175 @@
+/* REMOVE DEFAULT MARGIN AND PADDING FROM ENTIRE PAGE */
 *{
 	margin: 0;
 	padding: 0;
 }
 
-body{
-	background: #160d1c;
+/* HIDE SCROLLBAR */
+body::-webkit-scrollbar{
+	display: none;
 }
 
-.header h1{
+
+
+/* TITLE */
+
+.header{
+	overflow-x: hidden;
+}
+
+.header-title{
+	color: #f7e5bc;
 	font-family: Aboreto;
-	color: white;
-	width: 100%;
+/*	font-family: Josefin Sans;*/
 	display: flex;
 	justify-content: center;
-	letter-spacing: 10px;
 }
 
-.title-1 {
-	padding-top: 50px;
-	font-size: 4rem;
+.header-title h1{
+	position: absolute;
+	letter-spacing: 6px;
+	top: 235px;
+}
+
+.header-image1,
+.header-image2,
+.header-image3{
+	display: flex;
+	justify-content: center;
+}
+
+.header-image1{
 	animation-name: title-scale;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 }
 
-.title-2{
-	padding-top: 25px;
+.header-image2 img{
+	top: 450px;
+	width: 200px;
+	height: 100px;
+	position: absolute;
 }
 
-header{
-	background: #160d1c;
-	height: 325px;
-	width: 100%;
+.header-image3{
+	padding-top: 50px;
+}
+
+.links{
 	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 
-.featured-books{
-	background: #312649;
-	height: 80vh;
-	/*width: 50vw;*/
+.links li{
+	padding: 0px 75px;
+
 }
 
-.new-releases{
-	/*background: #90b870;*/
-	height: 200px;
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
+.links ul{
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: 2rem;
+	list-style-type: none;
 }
 
-.release{
-	border: 1px solid black;
+.links a{
+	text-decoration: none;
+	color: white;
+	transition: 0.5s;
+}
+
+.selected a{
+	color: #f7e5bc;
+	text-shadow: 0px 0px 15px #f7e5bc;
+}
+
+.link a:hover{
+	color: #f7e5bc;
+	text-shadow: 0px 0px 15px #f7e5bc;
+	font-size: 2.5rem;
+}
+
+/* PAGE BREAK */
+.page-break{
+	padding: 25px 0px;
+/*	background: white;*/
+}
+
+/* LAYER ABOVE BACKGROUND */
+.content{
+	overflow: auto;
+	position: relative;
+}
+
+/* BACKGROUND */
+.content::before{
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
+/*	background-image: url("images/er-bg.jpg");*/
+/*	background-image: url("images/er-castle2.png");*/
+	background-size: cover;
+	width: 100%;
 	height: 100%;
+		-o-filter: blur(10px);
+    	filter: blur(5px);
+    	filter: brightness(0.4);
+    transform: scale(1.04);
 }
 
-.db-box{
-	background: #504f74
-}
-
-.lb-box{
-	background: #78859a
+.image-container1{
+/*	background-image: url("images/er-lunacaria.png");*/
+	background-position: 0px -110px;
+	background-size: 100%;
+	height: 200px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @keyframes title-scale{
-	0%{transform: scale(0.9);}
-	50%{transform: scale(1.0);}
-	100%{transform: scale(0.9);}
+	0%{transform: rotate(2deg);}
+	25%{transform: scale(1.1)}
+	50%{transform: scale(1.0)}
+	75%{transform: rotate(-2deg)}
+	100%{transform: rotate(2deg);}
+}
+
+
+
+/*video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  		-o-filter: blur(500px);
+    	filter: blur(500px);
+    	filter: brightness(0.4);
+}*/
+
+#video-container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+#bg-video{
+    width: inherit;
+    height: inherit;
+	    -o-filter: blur(10px);
+		    filter: blur(9px) brightness(0.2);
+		    object-fit: cover;
+    transform: scale(1.07);
 }
