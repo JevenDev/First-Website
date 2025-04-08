@@ -2,8 +2,7 @@
 ---
 _BY JEVEN RANDHAWA_
 
-# [See it in action](Pixel-Art-Tutorial-Website
-)
+# [See it in action](https://jevendev.github.io/Pixel-Art-Tutorial-Website/)
 
 ### ABOUT
 CSS-Grid Base Tutorial made for a course a while ago.
